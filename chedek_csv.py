@@ -15,12 +15,15 @@ def csv(old_file, new_file, columns):
                     line.remove('C')
                     line.remove('PID')
                     line.remove('\n')
+                    print(line)
+                    line[1] = line[1].replace('^', ' ')
+                    line[2] = line[2].replace('|', '')
+                    print(line[1])
+                    print(line[2])
 
-                    f_new.seek(0, 0)								# go to the begining of the file.
-                    f_new.write(columns + '\n')
-                    f_new.write(line[0] + ',')
-                    f_new.write(line[1]+ ',')
-                    f_new.write(line[2])
+                    # f_new.seek(0, 0)								# go to the begining of the file.
+                    # f_new.write(columns + '\n')
+                    # f_new.write(line[0] + ',' + line[1] + ',' + line[2])
         f_new.close()
     f.close()
 
