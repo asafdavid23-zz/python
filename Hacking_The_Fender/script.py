@@ -11,7 +11,7 @@ with open('passwords.csv') as f:
 
 with open('compromised.txt', 'w') as compromised_user_file:
   for u in compromised_users:
-    compromised_user_file.write(u + "\n")
+    compromised_user_file.write(u)
 
 with open('boss_message.json', 'w') as boss_message:
   boss_message_dict = {
